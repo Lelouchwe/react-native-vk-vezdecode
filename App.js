@@ -1,31 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Button, SafeAreaView, TouchableOpacity } from 'react-native';
-
+import {AppNavigation} from './src/navigation/AppNavigation'
 export default function App() {
-  return (
-    <SafeAreaView style={styles.container}>
-        <View>
-            <Text style={styles.h1}>Пожертвования</Text>
-        </View>
-        <View style={styles.hr}></View>
-        <View style={styles.wrap}>
-            <Text style={styles.span}>
-              У Вас пока нет сборов. {'\n'} Начните доброе дело.
-            </Text>
-            <TouchableOpacity
-            style={styles.btn}
-            // onPress={onPress}
-            >
-              <Text style={styles.btn_text}>
-                Создать сбор
-              </Text>
-            </TouchableOpacity>
-          
-          <StatusBar style="auto" />
-        </View>
-    </SafeAreaView>
-  );
+  return <AppNavigation></AppNavigation>
 }
 
 const styles = StyleSheet.create({
