@@ -1,44 +1,60 @@
 import React from 'react'
-import {StyleSheet, Text, View, Button, SafeAreaView, TouchableOpacity} from 'react-native'
+import {StyleSheet, Text, View, Button, SafeAreaView, TouchableOpacity, Image} from 'react-native'
 
 export const TypeCollect = () => {
     return (
         <SafeAreaView style={styles.container}>
-            {/* <View>
-                <Text style={styles.h1}>Пожертвования</Text>
-            </View>
-            <View style={styles.hr}></View> */}
             <View style={styles.wrap}>
                 <TouchableOpacity
                 style={styles.btn_type}
                 // onPress={onPress}
-                >
-                    <Text style={styles.btn_text}>
-                        Целевой сбор
-                    </Text>
-                    <Text style={styles.btn_subtext}>
-                        Когда есть определенная цель
-                    </Text>
+                >   
+                    <View style={styles.divIcon}>
+                        <Image 
+                            style={styles.iconLeft} 
+                            source={require('../../assets/IconColor.png')}/>
+                    </View>
+                    <View style={styles.divText}>
+                        <Text style={styles.btn_text}>
+                            Целевой сбор
+                        </Text>
+                        <Text style={styles.btn_subtext}>
+                            Когда есть определенная цель
+                        </Text>
+                    </View>
+                    <View style={styles.divArrow}>
+                        <Image 
+                            style={styles.iconRight} 
+                            source={require('../../assets/arrowRight.png')}/>
+                    </View> 
                 </TouchableOpacity>
                 <TouchableOpacity
                 style={styles.btn_type}
                 // onPress={onPress}
-                >
-                    <Text style={styles.btn_text}>
-                        Регулярный сбор
-                    </Text>
-                    <Text style={styles.btn_subtext}>
-                        Если помощь нужна ежемесячно
-                    </Text>
+                >   
+                    <View style={styles.divIcon}>
+                        <Image 
+                            style={styles.iconLeft} 
+                            source={require('../../assets/IconColor2.png')}/>
+                    </View>
+                    <View style={styles.divText}>
+                        <Text style={styles.btn_text}>
+                            Регулярный сбор
+                        </Text>
+                        <Text style={styles.btn_subtext}>
+                            Если помощь нужна ежемесячно
+                        </Text>
+                    </View>
+                    <View style={styles.divArrow}>
+                        <Image 
+                            style={styles.iconRight} 
+                            source={require('../../assets/arrowRight.png')}/>
+                    </View>
+                    
                 </TouchableOpacity>
-            
-            {/* <StatusBar style="auto" /> */}
             </View>
         </SafeAreaView>
     )
-}
-TypeCollect.navigationOptions = {
-    headerTitle: 'Тип сбора'
 }
 const styles = StyleSheet.create({
     container: {
@@ -65,17 +81,6 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       color: '#818C99'
     },
-    btn: {
-      backgroundColor: '#4986CC',
-      width: 133,
-      height: 36,
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      borderRadius: 10,
-      marginTop: 24,
-      alignSelf: 'center',
-    },
     btn_text: {
         color: '#000000',
         fontSize: 16,
@@ -93,17 +98,33 @@ const styles = StyleSheet.create({
         width: 351,
         height: 62,
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         alignItems: 'center',
         borderRadius: 10,
         margin: 6,
+        flexDirection: 'row',
     },
-    hr: {
-      height: 0.33,
-      backgroundColor: '#D7D8D9',
-      paddingRight: 12,
-      paddingLeft: 12,
-      marginTop: 13.5,
-      width: '90%',
+    divIcon: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 48,
+    },
+    divText: {
+        flex: 1,
+    },
+    divArrow: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 48,      
+    },
+    iconLeft: {
+        width: 24,
+        height: 24,
+    },
+    iconRight: {
+        width: 9.5,
+        height: 16.5,
     }
   });
