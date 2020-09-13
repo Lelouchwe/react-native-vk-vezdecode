@@ -35,7 +35,7 @@ export const TypeCollect = () => {
                     <View style={styles.divIcon}>
                         <Image 
                             style={styles.iconLeft} 
-                            source={require('../../assets/IconColor2.png')}/>
+                            source={require('../../assets/IconColor22.svg')}/>
                     </View>
                     <View style={styles.divText}>
                         <Text style={styles.btn_text}>
@@ -109,6 +109,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width: 48,
+        height: '100%',
     },
     divText: {
         flex: 1,
